@@ -1,0 +1,27 @@
+{
+    "name": "alanjoose/dbsocket",
+    "description": "A simple database connection provider.",
+    "type": "metapackage",
+    "require-dev": {
+        "phpunit/phpunit": "^11.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alanjoose\\Dbsocket\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Alan Jose",
+            "email": "alanjsyt@gmail.com",
+            "role": "Develper",
+            "homepage": "https://github.com.br/Alanjoose"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {}
+}
