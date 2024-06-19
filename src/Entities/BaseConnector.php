@@ -181,4 +181,20 @@ abstract class BaseConnector
         $this->options = [];
         return $this;
     }
+
+    public function connect(): \PDO
+    {
+        try
+        {
+            $connectionString = $this->buildConnectionString();
+            $pdoObject = new \PDO($connectionString, $this->username, $this->password, $this->options);
+            return $pdoObject;
+        }
+        catch (\PDOException|\Exception $exception)
+        {
+            unset($pdoObject);
+            printf('DBSOCKET ERROR: %s', $exception->getMessage());
+            die($exception->getCode());
+        }
+    }
 }
