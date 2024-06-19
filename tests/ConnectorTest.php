@@ -12,13 +12,30 @@ use Alanjoose\Dbsocket\Entities\ConnectorRouter;
 
 final class ConnectorTest extends TestCase
 {
-    protected function setUp(): void
+    /**
+     * Check if connector instance is not null.
+     * @return void
+     */
+    public function testConnectorCanBeInstantiated(): void
     {
-        parent::setUp();
+        $this->assertNotNull(ConnectorRouter::getConnectorInstance());
     }
 
-    public function testConnectionIsMadeSuccessfully(): void
+    /**
+     * Check if connector is instantiated via router.
+     * @return void
+     */
+    public function testConnectorCanConnectViaRouter(): void
     {
-        $this->assertInstanceOf(\PDO::class, ConnectorRouter::getConnector());
+        $this->assertInstanceOf(\PDO::class, ConnectorRouter::getConnection());
+    }
+
+    /**
+     * Check if connector is instantiated by single instance.
+     * @return void
+     */
+    public function testConnectorCanConnectViaInstance(): void
+    {
+        $this->assertInstanceOf(\PDO::class, ConnectorRouter::getConnectorInstance()->connect());
     }
 }
