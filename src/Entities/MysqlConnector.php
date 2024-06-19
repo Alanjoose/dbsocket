@@ -8,12 +8,17 @@ namespace Alanjoose\Dbsocket\Entities;
 
 class MysqlConnector extends BaseConnector
 {
+    private bool $useUnixSocket;
+
     public function __construct(bool $useUnixSocket = false)
     {
         $this->useUnixSocket = $useUnixSocket;
         parent::__construct();
     }
 
+    /**
+     * @return string
+     */
     protected function buildConnectionString(): string
     {
         if($this->useUnixSocket){
