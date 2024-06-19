@@ -13,20 +13,16 @@ class ConnectorRouter
      */
     private static BaseConnector $connector;
 
-    public function __construct()
-    {
-        $driverFromEnv = getenv('DB_DRIVER');
-        self::$connector = match($driverFromEnv) {
-            'mysql' => new MysqlConnector(),
-        };
-    }
-
     /**
      * Get the connector based on env DB_DRIVER key.
      * @return \PDO
      */
     public static function getConnector(): \PDO
     {
+        $driverFromEnv = $_ENV['DB_DRIVER'];
+        self::$connector = match($driverFromEnv) {
+            'mysql' => new MysqlConnector(),
+        };
         return self::$connector->connect();
     }
 }

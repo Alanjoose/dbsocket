@@ -12,7 +12,7 @@ class MysqlConnector extends BaseConnector
 
     public function __construct()
     {
-        $this->useUnixSocket = (bool) getenv('DB_USE_UNIX_SOCKET');
+        $this->useUnixSocket = (bool) $_ENV['DB_USE_UNIX_SOCKET'];
         parent::__construct();
     }
 
