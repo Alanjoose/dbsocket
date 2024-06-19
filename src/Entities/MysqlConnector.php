@@ -10,9 +10,9 @@ class MysqlConnector extends BaseConnector
 {
     private bool $useUnixSocket;
 
-    public function __construct(bool $useUnixSocket = false)
+    public function __construct()
     {
-        $this->useUnixSocket = $useUnixSocket;
+        $this->useUnixSocket = (bool) getenv('DB_USE_UNIX_SOCKET');
         parent::__construct();
     }
 
