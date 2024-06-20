@@ -9,12 +9,6 @@ namespace Alanjoose\Dbsocket\Entities;
 abstract class BaseConnector
 {
     /**
-     * DBMS driver.
-     * @var string
-     */
-    protected string $driver;
-
-    /**
      * Database server host. (Omit if using unix_socket or sqlite).
      * @var string|null
      */
@@ -59,7 +53,6 @@ abstract class BaseConnector
     public function __construct()
     {
         $configSet = new ConfigSet();
-        $this->driver = $configSet->get('driver');
         $this->host = $configSet->get('host');
         $this->port = $configSet->get('port');
         $this->dbname = $configSet->get('dbname');
@@ -73,14 +66,6 @@ abstract class BaseConnector
      * @return string
      */
     abstract protected function buildConnectionString(): string;
-
-    /**
-     * @return string
-     */
-    public function getDriver(): string
-    {
-        return $this->driver;
-    }
 
     /**
      * @return string|null

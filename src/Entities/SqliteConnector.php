@@ -6,7 +6,7 @@
  */
 namespace Alanjoose\Dbsocket\Entities;
 
-class SqliteConnetor extends BaseConnector
+class SqliteConnector extends BaseConnector
 {
     public function __construct()
     {

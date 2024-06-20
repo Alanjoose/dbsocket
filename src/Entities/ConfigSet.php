@@ -20,13 +20,12 @@ class ConfigSet
    public function __construct()
    {
        $this->configSet = [
-           'driver' => $_ENV['DB_DRIVER'],
-           'host' => $_ENV['DB_HOST'],
-           'port' => $_ENV['DB_PORT'],
-           'dbname' => $_ENV['DB_NAME'],
-           'username' => $_ENV['DB_USERNAME'],
-           'password' => $_ENV['DB_PASSWORD'],
-           'charset' => $_ENV['DB_CHARSET'],
+           'host' => $_ENV['DB_HOST'] ?? null,
+           'port' => $_ENV['DB_PORT'] ?? null,
+           'dbname' => $_ENV['DB_NAME'] ?? '',
+           'username' => $_ENV['DB_USERNAME'] ?? null,
+           'password' => $_ENV['DB_PASSWORD'] ?? null,
+           'charset' => $_ENV['DB_CHARSET'] ?? null,
        ];
    }
 
