@@ -17,6 +17,7 @@ class ConnectorRouter
         $driverFromEnv = $_ENV['DB_DRIVER'];
         return match($driverFromEnv) {
             'mysql' => new MysqlConnector(),
+            'sqlite' => new SqliteConnetor(),
             default => null,
         };
     }
