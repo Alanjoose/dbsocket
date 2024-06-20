@@ -70,7 +70,7 @@ abstract class BaseConnector
     /**
      * @return string|null
      */
-    public function getHost(): ?string
+    protected function getHost(): ?string
     {
         return $this->host;
     }
@@ -78,7 +78,7 @@ abstract class BaseConnector
     /**
      * @return int|null
      */
-    public function getPort(): ?int
+    protected function getPort(): ?int
     {
         return $this->port;
     }
@@ -86,7 +86,7 @@ abstract class BaseConnector
     /**
      * @return string
      */
-    public function getDbname(): string
+    protected function getDbname(): string
     {
         return $this->dbname;
     }
@@ -94,7 +94,7 @@ abstract class BaseConnector
     /**
      * @return string|null
      */
-    public function getUsername(): ?string
+    protected function getUsername(): ?string
     {
         return $this->username;
     }
@@ -102,7 +102,7 @@ abstract class BaseConnector
     /**
      * @return string|null
      */
-    public function getPassword(): ?string
+    protected function getPassword(): ?string
     {
         return $this->password;
     }
@@ -110,7 +110,7 @@ abstract class BaseConnector
     /**
      * @return string
      */
-    public function getCharset(): string
+    protected function getCharset(): string
     {
         return $this->charset;
     }
@@ -164,6 +164,17 @@ abstract class BaseConnector
     public function resetOptions(): self
     {
         $this->options = [];
+        return $this;
+    }
+
+    /**
+     * Set the options as preset data based on driver.
+     * @return $this
+     */
+    public function useStandardOptions()
+    {
+        $driver = $_ENV['DB_DRIVER'];
+        $this->options = ConfigSet::getPresetFor($driver);
         return $this;
     }
 
