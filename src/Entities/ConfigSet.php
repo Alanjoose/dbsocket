@@ -46,7 +46,7 @@ class ConfigSet
      * @param string $driver
      * @return array
      */
-   public function getPresetFor(string $driver)
+   public static function getPresetFor(string $driver)
    {
        $connectorEnum = match($driver) {
            'mysql' => ConnectorEnum::MYSQL,

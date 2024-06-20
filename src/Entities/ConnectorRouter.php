@@ -27,7 +27,8 @@ class ConnectorRouter
      */
     public static function getConnection(): \PDO
     {
-        return self::getBasedDriverConnector()->connect();
+        $currentDriver = $_ENV['DB_DRIVER'];
+        return self::getBasedDriverConnector()->defineOptions(ConfigSet::getPresetFor($currentDriver))->connect();
     }
 
     /**
