@@ -39,19 +39,19 @@
     defined in the environment variables and using predefined options for each driver. It can be used in the following way:
 </p>
 
-![ConnectorRouter usage example.](./img/connectorrouter_connection.png)
+![ConnectorRouter usage example.](./img/connectorrouter_dynamic_usage.png)
 
 <p>
     If you prefer to manually configure the connector, you can do it as follows:
 </p>
 
-![ConnectorRouter config one at time.](./img/one_at_time_config.png)
+![ConnectorRouter config one at time.](./img/manual_connector_config.png)
 
 <p>
     Or set the options all at once:
 </p>
 
-![ConnectorRouter config by options set.](./img/options_set.png)
+![ConnectorRouter config by options set.](./img/defining_options_via_array.png)
 
 #### Single connectors
 
@@ -75,7 +75,7 @@
     <li>DB_PASSWORD</li>
 </ul>
 
-![MysqlConnector usage.](./img/mysqlconnector_usage.png)
+![MysqlConnector usage.](./img/mysqlconnector_example.png)
 
 #### Sqlite
 
@@ -91,3 +91,6 @@
     <b>Note: If you intend to use Sqlite's memory mode, set the <code>DB_NAME</code> to <code>':memory:'</code> instead of providing the database file path.</b>
 </p>
 
+![SqliteConnector usage.](./img/sqliteconnector_example.png)
+
+### Updated at 2024/20/06 by Alan José.
