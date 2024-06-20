@@ -32,6 +32,8 @@
 
 ### Using DBSocket
 
+#### ConnectorRouter
+
 <p>
     The package has an entity called <code>ConnectorRouter</code> that creates an instance of the connector based on the driver
     defined in the environment variables and using predefined options for each driver. It can be used in the following way:
@@ -50,3 +52,42 @@
 </p>
 
 ![ConnectorRouter config by options set.](./img/options_set.png)
+
+#### Single connectors
+
+<p>
+    If you prefer to use a specific connector without the <code>ConnectorRouter</code>, you can use the connectors individually.
+</p>
+
+#### MySQL
+
+<p>
+    To connect to MySQL use the <code>MysqlConnector</code> entity. Pay attention to the following variables:
+</p>
+
+<ul>
+    <li>DB_HOST</li>
+    <li>DB_NAME</li>
+    <li>DB_CHARSET</li>
+    <li>DB_CHARSET</li>
+    <li>DB_USE_UNIX_SOCKET</li>
+    <li>DB_USERNAME</li>
+    <li>DB_PASSWORD</li>
+</ul>
+
+![MysqlConnector usage.](./img/mysqlconnector_usage.png)
+
+#### Sqlite
+
+<p>
+    To connect to MySQL use the <code>SqliteConnector</code> entity. Pay attention to the following variables:
+</p>
+
+<ul>
+    <li>DB_NAME</li>
+</ul>
+
+<p>
+    <b>Note: If you intend to use Sqlite's memory mode, set the <code>DB_NAME</code> to <code>':memory:'</code> instead of providing the database file path.</b>
+</p>
+
