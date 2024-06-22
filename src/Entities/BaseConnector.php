@@ -171,7 +171,7 @@ abstract class BaseConnector
      * Set the options as preset data based on driver.
      * @return $this
      */
-    public function useStandardOptions()
+    public function useStandardOptions(): self
     {
         $driver = $_ENV['DB_DRIVER'];
         $this->options = ConfigSet::getPresetFor($driver);
