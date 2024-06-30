@@ -23,5 +23,8 @@
         }
     ],
     "minimum-stability": "alpha",
-    "require": {}
+    "require": {
+        "php": ">=8.3",
+        "ext-pdo": "*"
+    }
 }
