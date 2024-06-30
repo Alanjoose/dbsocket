@@ -23,7 +23,7 @@ class MysqlConnector extends BaseConnector
     {
         if($this->useUnixSocket){
             $connectionString = 'mysql:unix_socket=' . $this->getHost()
-            . ';dbaname=' . $this->getDbname() . ';charset=' . $this->getCharset();
+            . ';dbname=' . $this->getDbname() . ';charset=' . $this->getCharset();
         }
         else {
             $connectionString = 'mysql:host=' . $this->getHost()

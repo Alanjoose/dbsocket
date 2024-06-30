@@ -10,4 +10,6 @@ enum ConnectorEnum
 {
     case MYSQL;
     CASE SQLITE;
+
+    case PGSQL;
 }

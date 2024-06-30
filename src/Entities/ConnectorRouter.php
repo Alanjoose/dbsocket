@@ -18,6 +18,7 @@ class ConnectorRouter
         return match($driverFromEnv) {
             'mysql' => new MysqlConnector(),
             'sqlite' => new SqliteConnector(),
+            'pgsql' => new PgsqlConnector(),
             default => null,
         };
     }
