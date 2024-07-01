@@ -67,8 +67,8 @@
 
 <ul>
     <li>DB_HOST</li>
+    <li>DB_PORT</li>
     <li>DB_NAME</li>
-    <li>DB_CHARSET</li>
     <li>DB_CHARSET</li>
     <li>DB_USE_UNIX_SOCKET</li>
     <li>DB_USERNAME</li>
@@ -93,4 +93,21 @@
 
 ![SqliteConnector usage.](./img/sqliteconnector_example.png)
 
-### Updated at 2024/20/06 by Alan José.
+#### Pgsql
+
+<p>
+    To connect to Pgsql use the <code>PgsqlConnector</code> entity. Pay attention to the following variables:
+</p>
+
+<ul>
+    <li>DB_HOST</li>
+    <li>DB_PORT</li>
+    <li>DB_NAME</li>
+    <li>DB_USE_UNIX_SOCKET</li>
+    <li>DB_USERNAME</li>
+    <li>DB_PASSWORD</li>
+</ul>
+
+![PgsqlConnector usage.](./img/pgsqlconnector_example.png)
+
+### Updated at 2024/30/06 by Alan José.

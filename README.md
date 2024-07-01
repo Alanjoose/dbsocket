@@ -25,7 +25,7 @@ Then, run the <code>composer install</code>. Then configure your environment wit
     <li><code>DB_USERNAME</code> (<b>String, Nullable</b>)</li>
     <li><code>DB_PASSWORD</code> (<b>String, Nullable</b>)</li>
     <li><code>DB_CHARSET</code> (<b>String, Nullable</b>, <code>utf8</code> by default)</li>
-    <b>Exclusive for MySQL</b>
+    <b>Exclusive for MySQL, PGSQL</b>
     <li><code>DB_USE_UNIX_SOCKET</code> (<b>String, Nullable</b>)</li>
 </ul>
 
