@@ -18,10 +18,13 @@
         {
             "name": "Alan Jose",
             "email": "alanjsyt@gmail.com",
-            "role": "Develper",
+            "role": "Developer",
             "homepage": "https://github.com.br/Alanjoose"
         }
     ],
     "minimum-stability": "alpha",
-    "require": {}
+    "require": {
+        "php": ">=8.3",
+        "ext-pdo": "*"
+    }
 }
